@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="JS数组的方法讲解 123456789101112131415161718192021concat()将两个数组合并成一个新的数组，源数组不会改变返回值：合并好的新数组参数：我们要合并的数组slice()基于当前数组获取指定区域元素并创建一个新的数组。源数组不变参数：start开始获取区域的下标，end结束获取区域的下标(不包括end下标位置的那个元素)返回值：指定区域元素生成的新数组splice">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/js%E5%AD%A6%E4%B9%A0/%E6%95%B0%E7%BB%84/JS%E6%95%B0%E7%BB%84%E7%9A%84%E6%96%B9%E6%B3%95%E8%AE%B2%E8%A7%A3.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="JS数组的方法讲解 123456789101112131415161718192021concat()将两个数组合并成一个新的数组，源数组不会改变返回值：合并好的新数组参数：我们要合并的数组slice()基于当前数组获取指定区域元素并创建一个新的数组。源数组不变参数：start开始获取区域的下标，end结束获取区域的下标(不包括end下标位置的那个元素)返回值：指定区域元素生成的新数组splice">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-01-03T08:18:03.862Z">
+<meta property="article:modified_time" content="2020-01-03T04:06:35.490Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/js%E5%AD%A6%E4%B9%A0/%E6%95%B0%E7%BB%84/JS%E6%95%B0%E7%BB%84%E7%9A%84%E6%96%B9%E6%B3%95%E8%AE%B2%E8%A7%A3.html" class="article-date">
+  <time datetime="2020-01-03T08:18:03.862Z" itemprop="datePublished">2020-01-03</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>JS数组的方法讲解</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">concat()</span><br><span class="line">将两个数组合并成一个新的数组，源数组不会改变</span><br><span class="line">返回值：合并好的新数组</span><br><span class="line">参数：我们要合并的数组</span><br><span class="line"></span><br><span class="line">slice()</span><br><span class="line">基于当前数组获取指定区域元素并创建一个新的数组。源数组不变</span><br><span class="line">参数：start开始获取区域的下标，end结束获取区域的下标(不包括end下标位置的那个元素)</span><br><span class="line">返回值：指定区域元素生成的新数组</span><br><span class="line"></span><br><span class="line">splice 可以完成删除，插入，替换操作</span><br><span class="line">参数：参数1 截取的开始下标</span><br><span class="line">    ：参数2 截取的长度</span><br><span class="line">    ：参数3 在截取的开始下标位置，我们要插入的元素，插入的元素的个数随意。</span><br><span class="line">    会对源数组进行修改</span><br><span class="line">    返回值：被截取了的元素所组成的数组</span><br><span class="line"></span><br><span class="line">join()</span><br><span class="line">使用拼接符将数组中元素拼接成字符串</span><br><span class="line">参数：拼接符</span><br><span class="line">返回值：拼接好的字符串</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> arr = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line"><span class="keyword">let</span> arr1 = [<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>];</span><br><span class="line"><span class="comment">//concat</span></span><br><span class="line"><span class="keyword">let</span> arr2  = arr.concat(arr1);</span><br><span class="line"><span class="comment">//alert(arr2);//1,2,3,4,5,6</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//slice</span></span><br><span class="line"><span class="keyword">let</span> arr3 = arr2.slice(<span class="number">1</span>,<span class="number">3</span>);</span><br><span class="line"><span class="comment">//alert(arr3);//2,3</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//splice删除</span></span><br><span class="line"><span class="keyword">let</span> arr4 = arr2.splice(<span class="number">1</span>,<span class="number">2</span>);</span><br><span class="line"><span class="comment">//alert(arr2);//1,4,5,6</span></span><br><span class="line"><span class="comment">//alert(arr4);//2,3</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//splice插入</span></span><br><span class="line">arr2.splice(<span class="number">1</span>,<span class="number">0</span>,<span class="number">2</span>,<span class="number">3</span>);<span class="comment">//因为没有截取长度 所以返回值是一个空的数组</span></span><br><span class="line"><span class="comment">//alert(arr2);//1,2,3,4,5,6</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//splice替换 先删除 再添加</span></span><br><span class="line">arr2.splice(<span class="number">1</span>,<span class="number">1</span>,<span class="number">10</span>);</span><br><span class="line">alert(arr2);<span class="comment">//1,10,3,4,5,6</span></span><br><span class="line"><span class="keyword">let</span> arr5 = arr.join(<span class="string">""</span>);</span><br><span class="line">alert(arr5);<span class="comment">//123</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/js%E5%AD%A6%E4%B9%A0/%E6%95%B0%E7%BB%84/JS%E6%95%B0%E7%BB%84%E7%9A%84%E6%96%B9%E6%B3%95%E8%AE%B2%E8%A7%A3.html" data-id="ck6jk553v000lrsvq6dbm14hv" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/02/09/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/">我的博客</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/25/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="JS认识日期对象 1234567891011121314在js中日期对象是复合数据类型日期对象的创建方式let time &#x3D; new Date();参数：如果我们不传递参数，默认获取的就是当前系统时间我们所用的事件都是根据格林尼治时间生成日期的参数参数类型：(&quot;2015-08-22&quot;)(2016,04,22,14,25);(&quot;2015&#x2F;08&amp;#x2">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/js%E5%AD%A6%E4%B9%A0/%E6%97%A5%E6%9C%9F%E5%87%BD%E6%95%B0/JS%E8%AE%A4%E8%AF%86%E6%97%A5%E6%9C%9F%E5%AF%B9%E8%B1%A1.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="JS认识日期对象 1234567891011121314在js中日期对象是复合数据类型日期对象的创建方式let time &#x3D; new Date();参数：如果我们不传递参数，默认获取的就是当前系统时间我们所用的事件都是根据格林尼治时间生成日期的参数参数类型：(&quot;2015-08-22&quot;)(2016,04,22,14,25);(&quot;2015&#x2F;08&amp;#x2">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-01-10T08:30:14.431Z">
+<meta property="article:modified_time" content="2020-01-07T04:47:03.000Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/js%E5%AD%A6%E4%B9%A0/%E6%97%A5%E6%9C%9F%E5%87%BD%E6%95%B0/JS%E8%AE%A4%E8%AF%86%E6%97%A5%E6%9C%9F%E5%AF%B9%E8%B1%A1.html" class="article-date">
+  <time datetime="2020-01-10T08:30:14.431Z" itemprop="datePublished">2020-01-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>JS认识日期对象</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">在js中日期对象是复合数据类型</span><br><span class="line">日期对象的创建方式</span><br><span class="line">let time &#x3D; new Date();</span><br><span class="line">参数：如果我们不传递参数，默认获取的就是当前系统时间</span><br><span class="line">我们所用的事件都是根据格林尼治时间</span><br><span class="line"></span><br><span class="line">生成日期的参数</span><br><span class="line">参数类型：</span><br><span class="line">(&quot;2015-08-22&quot;)</span><br><span class="line">(2016,04,22,14,25);</span><br><span class="line">(&quot;2015&#x2F;08&#x2F;22&quot;)</span><br><span class="line"></span><br><span class="line">1秒 &#x3D; 1000毫秒</span><br><span class="line">参数可以毫秒计算，计算从1970年开始+毫秒数，计算出这个时间</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> time = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line"><span class="keyword">let</span> time1 = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="number">1000</span>);<span class="comment">//1970-1-1 因为1970年时unit的诞生日</span></span><br><span class="line">alert(time);<span class="comment">//Tue Jan 07 2020 12:38:48 GMT+0800 (中国标准时间)</span></span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/js%E5%AD%A6%E4%B9%A0/%E6%97%A5%E6%9C%9F%E5%87%BD%E6%95%B0/JS%E8%AE%A4%E8%AF%86%E6%97%A5%E6%9C%9F%E5%AF%B9%E8%B1%A1.html" data-id="ck6jk5541000xrsvq0fck1r39" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/02/09/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/">我的博客</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/25/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

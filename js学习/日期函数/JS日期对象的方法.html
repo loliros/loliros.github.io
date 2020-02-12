@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="JS日期对象的方法12345678910111213141516171819202122232425日期对象格式化的方法日期对象.方法();let time &#x3D; new Date();alert(time.toDateString());&#x2F;&#x2F;以特定的格式显示星期几 月 日 年alert(time.toTimeString());&#x2F;&#x2F;以特定格式显示时">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://yoursite.com/js%E5%AD%A6%E4%B9%A0/%E6%97%A5%E6%9C%9F%E5%87%BD%E6%95%B0/JS%E6%97%A5%E6%9C%9F%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%96%B9%E6%B3%95.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="JS日期对象的方法12345678910111213141516171819202122232425日期对象格式化的方法日期对象.方法();let time &#x3D; new Date();alert(time.toDateString());&#x2F;&#x2F;以特定的格式显示星期几 月 日 年alert(time.toTimeString());&#x2F;&#x2F;以特定格式显示时">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-01-10T08:30:14.436Z">
+<meta property="article:modified_time" content="2020-01-08T07:20:34.484Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/js%E5%AD%A6%E4%B9%A0/%E6%97%A5%E6%9C%9F%E5%87%BD%E6%95%B0/JS%E6%97%A5%E6%9C%9F%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%96%B9%E6%B3%95.html" class="article-date">
+  <time datetime="2020-01-10T08:30:14.436Z" itemprop="datePublished">2020-01-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="JS日期对象的方法"><a href="#JS日期对象的方法" class="headerlink" title="JS日期对象的方法"></a>JS日期对象的方法</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">日期对象格式化的方法</span><br><span class="line">日期对象.方法();</span><br><span class="line">let time &#x3D; new Date();</span><br><span class="line">alert(time.toDateString());&#x2F;&#x2F;以特定的格式显示星期几 月 日 年</span><br><span class="line">alert(time.toTimeString());&#x2F;&#x2F;以特定格式显示时、分、秒、区</span><br><span class="line">alert(time.toLocaleDateString());&#x2F;&#x2F;以特定地区格式显示星期几、月、日、年</span><br><span class="line">alert(time.toLocaleTimeString());&#x2F;&#x2F;以特定地区格式显示时、分、秒、时区</span><br><span class="line">alert(time.toUTCString());&#x2F;&#x2F;以特定格式显示完整的UTC日期</span><br><span class="line"></span><br><span class="line">如果不满意上面的输出格式</span><br><span class="line">可以对年月日时分秒分别进行取出</span><br><span class="line">set系列函数是设置值 get系列函数是获取值</span><br><span class="line">没有UTC的函数是获取系统当前时间</span><br><span class="line">有UTC的是输出格林尼治时间</span><br><span class="line"></span><br><span class="line">获取一周中的某一天从0开始，星期0代表的是周日，而且只能获取，不能设置</span><br><span class="line">getDay()</span><br><span class="line">获取月份的时候也是从0开始</span><br><span class="line">set&#x2F;getMonth()</span><br><span class="line"></span><br><span class="line">setTime()&#x2F;getTime()的参照物都是从1970年开始 获取的是当前日期距离1970年的毫秒数</span><br><span class="line"></span><br><span class="line">Date.parse()</span><br><span class="line">参数：是一个日期格式的字符串</span><br><span class="line">功能：返回这个日期距离1970年的毫秒数</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> time = <span class="keyword">new</span> <span class="built_in">Date</span>();</span><br><span class="line">alert(time.toDateString());</span><br><span class="line">alert(time.toTimeString());</span><br><span class="line">alert(time.toLocaleDateString());</span><br><span class="line">alert(time.toLocaleTimeString());</span><br><span class="line">alert(time.toUTCString());</span><br><span class="line">alert(time.getDay());</span><br><span class="line">alert(time.getMonth());</span><br><span class="line"><span class="keyword">let</span> time1 = <span class="built_in">Date</span>.parse(<span class="string">'2020-1-8'</span>);</span><br><span class="line"><span class="keyword">let</span> time2 = <span class="keyword">new</span> <span class="built_in">Date</span>(time1);</span><br><span class="line">alert(time2);</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/js%E5%AD%A6%E4%B9%A0/%E6%97%A5%E6%9C%9F%E5%87%BD%E6%95%B0/JS%E6%97%A5%E6%9C%9F%E5%AF%B9%E8%B1%A1%E7%9A%84%E6%96%B9%E6%B3%95.html" data-id="ck6jk553z000trsvqd0o1hr53" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/02/">February 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2020/02/09/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/">我的博客</a>
+          </li>
+        
+          <li>
+            <a href="/2020/01/25/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2020 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
